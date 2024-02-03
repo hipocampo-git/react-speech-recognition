@@ -148,9 +148,8 @@ export default class RecognitionManager {
     this.finalTranscript = ''
     for (let i = currentIndex; i < results.length; ++i) {
       if (document.cookie.indexOf('debug=true') > -1) {
-        console.log('results[i]', results[i]);
+        console.log('results[i]', results[i])
       }
-      console.log('results[i]', results[i]);
       if (results[i].isFinal && (!isAndroid() || results[i][0].confidence > 0)) {
         this.updateFinalTranscript(results[i][0].transcript)
       } else {
@@ -175,6 +174,9 @@ export default class RecognitionManager {
   }
 
   updateFinalTranscript(newFinalTranscript) {
+    if (document.cookie.indexOf('debug=true') > -1) {
+      console.log('updating final transcript: ', newFinalTranscript)
+    }
     this.finalTranscript = concatTranscripts(
       this.finalTranscript,
       newFinalTranscript
