@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JamesBrill/react-speech-recognition.git"
+    "url": "https://github.com/hipocampo-git/react-speech-recognition/tree/add-telemetry" 
   },
   "keywords": [
     "react",
