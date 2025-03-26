@@ -147,6 +147,7 @@ export default class RecognitionManager {
     this.interimTranscript = ''
     this.finalTranscript = ''
     for (let i = currentIndex; i < results.length; ++i) {
+      // HIP: debug code
       if (document.cookie.indexOf('debug=true') > -1) {
         console.log('results[i]', results[i])
       }
@@ -174,6 +175,7 @@ export default class RecognitionManager {
   }
 
   updateFinalTranscript(newFinalTranscript) {
+    // HIP: debug code
     if (document.cookie.indexOf('debug=true') > -1) {
       console.log('updating final transcript: ', newFinalTranscript)
     }
